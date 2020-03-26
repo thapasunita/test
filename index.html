@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="full-container">
+        <nav class="navbar">
+            <div class="container">
+                <div class="text-box">
+                    <a href="#"> START BOOTSTRAP</a>
+                </div>
+
+                <div class="menu-box">
+                    <ul id="menu">
+                        <li><a href="">PORTFOLIO</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                    <span onclick="showmenu()">MENU &#9776;</span>
+                </div>
+
+            </div>
+
+        </nav>
+
+        <section class="section-box">
+            <div class="main-box">
+                <div class="image-box">
+                    <img src="avataaars.svg" alt="">
+                </div>
+                <div class="box">
+                    <h1>START BOOTSTRAP</h1>
+                    <div id="small-box">
+                        <div class="line"></div>
+                        <i id="icon" class="fa fa-star" style="font-size:40px; color: white;"></i>
+                        <div id="right" class="line"></div>
+
+                    </div>
+                    <div id="para">
+                        <p>Graphic Artist - Web Designer - Illustrator</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="portfolio-box">
+            <div class="container">
+                <div class="portfolio-header">
+                    <h2>PORTFOLIO</h2>
+                    <div class="div-line"></div>
+                    <i id="star" class="fa fa-star" style="font-size:40px; color: #2c3e50;"></i>
+                    <div id="last-line" class="div-line"></div>
+                </div>
+
+                <div class="boxs">
+                    <div class="box-box top left">
+                        <img src="cabin.png" alt="">
+                    </div>
+                    <div class="box-box top">
+                        <img src="cake.png" alt="">
+                    </div>
+                    <div class="box-box top">
+                        <img src="circus.png" alt="">
+                    </div>
+                    <div class="box-box left">
+                        <img src="game.png" alt="">
+                    </div>
+                    <div class="box-box">
+                        <img src="safe.png" alt="">
+                    </div>
+                    <div class="box-box">
+                        <img src="submarine.png" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="about-box">
+            <div class="container">
+                <div class="ab">
+                    <h1>ABOUT</h1>
+                    <div class="div-line white"></div>
+                    <i id="star" class="fa fa-star" style="font-size:40px; color: white;"></i>
+                    <div class="box-line"></div>
+                </div>
+                <div class="about-text">
+                    <div class="about-textbox">
+                        <p class="p-r">Freelancer is a free bootstrap theme created by Start Bootstrap. The download
+                            includes the complete source files including HTML, CSS, and JavaScript as well as optional
+                            SASS stylesheets for easy customization.</p>
+                    </div>
+                    <div class="about-textbox">
+                        <p class="p-l">You can create your own custom avatar for the masthead, change the icon in the
+                            dividers, and add your email address to the contact form to make it fully functional!</p>
+                    </div>
+
+                </div>
+
+                <button class="download-btn"><i class="fa fa-download"></i> Free Download!</button>
+            </div>
+        </div>
+        <div class="contact-box">
+            <div class="container">
+                <div class="contact-header">
+                    <h1>CONTACT ME</h1>
+                    <div class="div-line white"></div>
+                    <i id="star" class="fa fa-star" style="font-size:40px; color: #2c3e50;"></i>
+                    <div class="box-line"></div>
+                </div>
+                <div class="input-box">
+                    <div class="input-filed">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email Address">
+                        <input type="text" placeholder="Phone Number">
+                        <input class="input-message" type="text" placeholder="Message">
+
+                    </div>
+                    <button class="contact-btn">Send</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-box">
+                    <h2>LOCATION</h2>
+                    <p>2215 John Daniel Drive
+                        Clark, MO 65243</p>
+                </div>
+                <div class="footer-box">
+                    <div class="footer-header">
+                        <h2>AROUND THE WEB</h2>
+                    </div>
+                    <div class="footer-icon">
+                        <i id="ftr-icon" class="fa fa-facebook" style="font-size:30px; color: white;"></i>
+                        <i class="fa fa-twitter" style="font-size:30px; color: white;"></i>
+                        <i class="fa fa-linkedin" style="font-size:30px; color: white;"></i>
+
+                        <i class="fa fa-dribbble" style="font-size:30px; color: white;"></i>
+                    </div>
+                </div>
+                <div class="footer-box">
+                    <h2>ABOUT FREELANCER</h2>
+                    <p>Freelance is a free to use, MIT licensed Bootstrap theme created by <t>Start Bootstrap</t>.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="last-footer">
+            <div class="container">
+                <p>Copyright © Your Website 2019</p>
+            </div>
+        </div>
+        <br>
+    </div>
+    <script>
+        var a = 0;
+        function showmenu() {
+
+            if (a == 0) {
+                document.getElementById("menu").style.display = "block";
+                a = 1;
+            }
+            else {
+                document.getElementById("menu").style.display = "none";
+                a = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
