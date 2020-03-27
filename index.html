@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body onscroll="test()">
     <div class="full-container">
         <nav class="navbar">
             <div class="container">
@@ -80,7 +80,7 @@
                     <div class="box-box">
                         <img src="submarine.png" alt="">
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -117,13 +117,13 @@
                     <div class="box-line"></div>
                 </div>
                 <div class="input-box">
-                    <div class="input-filed">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Email Address">
-                        <input type="text" placeholder="Phone Number">
-                        <input class="input-message" type="text" placeholder="Message">
 
-                    </div>
+                    <input class="input-filed" type="text" placeholder="Name">
+                    <input class="input-filed" type="text" placeholder="Email Address">
+                    <input class="input-filed" type="text" placeholder="Phone Number">
+                    <input class="input-filed input-message" type="text" placeholder="Message">
+
+
                     <button class="contact-btn">Send</button>
                 </div>
             </div>
@@ -176,6 +176,16 @@
                 a = 0;
             }
         }
+        var scrollbar = 0;
+        function test() {
+
+            if (scrollbar < 100) {
+                document.getElementsByTagName("nav")[0].style.paddingTop = "15px";
+                document.getElementsByTagName("nav")[0].style.paddingBottom = "15px";
+            }
+
+        }
+
     </script>
 </body>
 

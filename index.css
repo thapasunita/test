@@ -17,9 +17,10 @@ h1, h2, h3, p {
 
 .navbar {
     background-color: rgb(33, 37, 41);
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     width: 100%;
+    position: fixed;
 }
 
 .container {
@@ -60,6 +61,7 @@ h1, h2, h3, p {
 
 #menu li a:hover {
     color: #1abc9c;
+   
 }
 
 span {
@@ -91,7 +93,7 @@ span {
 
 .image-box {
     padding-bottom: 5px;
-    padding-top: 80px;
+    padding-top: 200px;
 }
 
 .image-box img {
@@ -381,7 +383,7 @@ span {
     margin: auto;
 }
 
-.input-filed input {
+.input-filed{
     background-color: transparent;
     border: none;
     font-size: 20px;
@@ -390,8 +392,11 @@ span {
     width: 100%;
     padding-top: 50px;
 }
-
-.input-filed .input-message {
+.input-filed:focus{
+  
+   outline: none;
+}
+.input-message {
     padding-bottom: 150px;
 }
 .contact-btn{
