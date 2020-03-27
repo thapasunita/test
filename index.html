@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Freelancer custom theme</title>
     <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body onscroll="test()">
-    <div class="full-container">
+    <div id="home" class="full-container">
         <nav class="navbar">
             <div class="container">
                 <div class="text-box">
-                    <a href="#"> START BOOTSTRAP</a>
+                    <a href="#home"> START BOOTSTRAP</a>
                 </div>
 
                 <div class="menu-box">
                     <ul id="menu">
-                        <li><a href="">PORTFOLIO</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">CONTACT</a></li>
+                        <li><a class="menu-link" href="#portfolio">PORTFOLIO</a></li>
+                        <li><a class="menu-link" href="#about">ABOUT</a></li>
+                        <li><a class="menu-link" href="#contact">CONTACT</a></li>
                     </ul>
                     <span onclick="showmenu()">MENU &#9776;</span>
                 </div>
@@ -40,7 +40,7 @@
                     <h1>START BOOTSTRAP</h1>
                     <div id="small-box">
                         <div class="line"></div>
-                        <i id="icon" class="fa fa-star" style="font-size:40px; color: white;"></i>
+                         <i id="icon" class="fa fa-star" style="font-size:40px; color: white;"></i>
                         <div id="right" class="line"></div>
 
                     </div>
@@ -52,7 +52,7 @@
             </div>
         </section>
 
-        <div class="portfolio-box">
+        <div id="portfolio" class="portfolio-box">
             <div class="container">
                 <div class="portfolio-header">
                     <h2>PORTFOLIO</h2>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="about-box">
+        <div id="about" class="about-box">
             <div class="container">
                 <div class="ab">
                     <h1>ABOUT</h1>
@@ -108,7 +108,7 @@
                 <button class="download-btn"><i class="fa fa-download"></i> Free Download!</button>
             </div>
         </div>
-        <div class="contact-box">
+        <div id="contact" class="contact-box">
             <div class="container">
                 <div class="contact-header">
                     <h1>CONTACT ME</h1>
@@ -161,7 +161,7 @@
                 <p>Copyright © Your Website 2019</p>
             </div>
         </div>
-        <br>
+       
     </div>
     <script>
         var a = 0;
@@ -176,15 +176,42 @@
                 a = 0;
             }
         }
-        var scrollbar = 0;
-        function test() {
 
-            if (scrollbar < 100) {
+
+        function test() {
+            var bartopgap = window.pageYOffset;
+            if (bartopgap > 95) {
                 document.getElementsByTagName("nav")[0].style.paddingTop = "15px";
                 document.getElementsByTagName("nav")[0].style.paddingBottom = "15px";
             }
-
+            else {
+                document.getElementsByTagName("nav")[0].style.paddingTop = "35px";
+                document.getElementsByTagName("nav")[0].style.paddingBottom = "35px";
+            }
+            console.log(bartopgap);
+            if(bartopgap < 708){
+                document.getElementsByClassName("menu-link")[0].classList.remove("active");
+                
+            }
+            if (bartopgap > 708) {
+                document.getElementsByClassName("menu-link")[0].classList.add("active");
+                document.getElementsByClassName("menu-link")[1].classList.remove("active");
+                document.getElementsByClassName("menu-link")[2].classList.remove("active");
+            }
+            
+            if (bartopgap > 1617) {
+                document.getElementsByClassName("menu-link")[1].classList.add("active");
+                document.getElementsByClassName("menu-link")[0].classList.remove("active");
+                document.getElementsByClassName("menu-link")[2].classList.remove("active");
+            }
+            
+            if (bartopgap > 2216) {
+                document.getElementsByClassName("menu-link")[2].classList.add("active");
+                document.getElementsByClassName("menu-link")[0].classList.remove("active");
+                document.getElementsByClassName("menu-link")[1].classList.remove("active");
+            }
         }
+
 
     </script>
 </body>
